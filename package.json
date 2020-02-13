@@ -1,0 +1,23 @@
+{
+  "name": "randogram",
+  "version": "1.0.0",
+  "description": "Instagram, but weird",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamMikacich/Randogram.git"
+  },
+  "author": "Adam Mikacich, Matthew Nazari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamMikacich/Randogram/issues"
+  },
+  "homepage": "https://github.com/AdamMikacich/Randogram#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
