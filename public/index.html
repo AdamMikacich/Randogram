@@ -10,10 +10,10 @@
 </head>
 
 <body>
-  <div class="nav">
+  <div id="nav">
 
   </div>
-  <div class="content">
+  <div id="content">
     <div id="images">
     </div>
   </div>
@@ -25,14 +25,15 @@
     overflow-x: hidden;
   }
   
-  .nav {
+  #nav {
     width: 100vw;
     height: 60px;
+    position: fixed;
   }
   
-  .content {
+  #content {
     width: 100vw;
-    height: calc(100vh - 60px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
   }

@@ -9,6 +9,7 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/public/index.htm
 app.use('/static', express.static('public'));
 
 function generate() {
+  console.log('called');
   return crypto.randomBytes(3).toString('hex');
 }
 
