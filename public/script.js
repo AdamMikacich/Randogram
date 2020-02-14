@@ -12,14 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
     images.appendChild(element);
   }
 
-  const count = 3;
-  for (let i = 0; i < count; i++) {
-    addImage();
+  function addImagesMultiple() {
+    const count = 3;
+    for (let i = 0; i < count; i++) {
+      addImage();
+    }
   }
+
+  addImagesMultiple();
 
   window.addEventListener('scroll', (e) => {
     if (window.scrollY + window.innerHeight === images.offsetHeight) {
-      addImage();
+      addImagesMultiple();
     }
   })
 });
