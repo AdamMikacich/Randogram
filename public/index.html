@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randogram</title>
+
+  <script src="./static/script.js"></script>
+</head>
+
+<body>
+  <div class="nav">
+
+  </div>
+  <div class="content">
+    <div id="images">
+    </div>
+  </div>
+</body>
+
+<style>
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  .nav {
+    width: 100vw;
+    height: 60px;
+  }
+  
+  .content {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #images {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    background: black;
+    margin: 10px 0;
+  }
+  
+  .fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+  }
+</style>
+
+</html>
