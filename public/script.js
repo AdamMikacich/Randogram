@@ -16,18 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
     element.setAttribute('data-zoomed', 'false');
 
     element.addEventListener('click', () => {
-      console.log('click' + element.getAttribute('data-zoomed'));
       if (element.getAttribute('data-zoomed') === 'true') {
         element.style.width = '500px';
         element.style.height =  '500px';
         element.setAttribute('data-zoomed', 'false');
       } else {
-        console.log('YEAAA, zooming in... NOW!');
-        element.style.width = element.childNodes[0].naturalWidth + 'px';
-        element.style.height = element.childNodes[0].naturalHeight + 'px';
+        naturalWidth = element.childNodes[0].naturalWidth
+        naturalHeight = element.childNodes[0].naturalHeight        
+        /// ensuring min and max width for zooming image
+        restraints = [700, window.innerWidth * 0.9]
+        scale = clamp(naturalWidth, ...restraints)/naturalWidth
+        element.style.width = naturalWidth * scale + 'px';
+        element.style.height = naturalHeight * scale + 'px';
         element.setAttribute('data-zoomed', 'true');
       }
     });
+  }
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(min, value), max)
   }
 
   function addImagesMultiple() {
