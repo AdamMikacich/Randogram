@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const request = require('request');
 const crypto = require('crypto');
-const port = 3000;
+const port = 4000;
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/public/index.html')));
 app.use('/static', express.static('public'));

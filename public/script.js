@@ -21,11 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
         element.style.height =  '500px';
         element.setAttribute('data-zoomed', 'false');
       } else {
-        naturalWidth = element.childNodes[0].naturalWidth
-        naturalHeight = element.childNodes[0].naturalHeight        
+        naturalWidth = element.childNodes[0].naturalWidth;
+        naturalHeight = element.childNodes[0].naturalHeight;
+
         /// ensuring min and max width for zooming image
-        restraints = [700, window.innerWidth * 0.9]
-        scale = clamp(naturalWidth, ...restraints)/naturalWidth
+        restraints = [700, window.innerWidth * 0.9];
+        scale = clamp(naturalWidth, ...restraints) / naturalWidth;
         element.style.width = naturalWidth * scale + 'px';
         element.style.height = naturalHeight * scale + 'px';
         element.setAttribute('data-zoomed', 'true');
