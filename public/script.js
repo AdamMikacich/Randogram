@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const images = document.getElementById('images');
   const content = document.getElementById('content');
 
+  const IMAGE_SIZE = '300px';
   let imageID = 0;
 
   function addImage() {
@@ -11,14 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     images.appendChild(element);
 
-    element.style.width = '500px';
-    element.style.height =  '500px';
+    element.style.width = IMAGE_SIZE;
+    element.style.height =  IMAGE_SIZE;
     element.setAttribute('data-zoomed', 'false');
 
     element.addEventListener('click', () => {
       if (element.getAttribute('data-zoomed') === 'true') {
-        element.style.width = '500px';
-        element.style.height =  '500px';
+        element.style.width = IMAGE_SIZE;
+        element.style.height =  IMAGE_SIZE;
         element.setAttribute('data-zoomed', 'false');
       } else {
         naturalWidth = element.childNodes[0].naturalWidth;
