@@ -11,7 +11,7 @@
 
 <body>
   <div id="nav">
-
+    <h1>RANDOGRAM</h1>
   </div>
   <div id="content">
     <div id="images">
@@ -20,15 +20,29 @@
 </body>
 
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Tomorrow:700i&display=swap');
+
   body {
     margin: 0;
     overflow-x: hidden;
+    font-family: 'Tomorrow', sans-serif;
+    background: #252d36;
   }
   
   #nav {
     width: 100vw;
     height: 60px;
     position: fixed;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #nav h1 {
+    color: #252d36;
+    font-style: italic;
+    line-height: 60px;
+    margin: 0;
+    text-align: center;
   }
   
   #content {
@@ -44,6 +58,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 60px;
   }
   
   .fill {
