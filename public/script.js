@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     images.appendChild(element);
 
     element.style.width = IMAGE_SIZE;
-    element.style.height =  IMAGE_SIZE;
+    element.style.height = IMAGE_SIZE;
     element.setAttribute('data-zoomed', 'false');
 
     element.addEventListener('click', () => {
       if (element.getAttribute('data-zoomed') === 'true') {
         element.style.width = IMAGE_SIZE;
-        element.style.height =  IMAGE_SIZE;
+        element.style.height = IMAGE_SIZE;
         element.setAttribute('data-zoomed', 'false');
       } else {
         naturalWidth = element.childNodes[0].naturalWidth;
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function addImagesMultiple() {
-    const count = 4;
+    const count = 8;
     for (let i = 0; i < count; i++) {
       addImage();
     }
