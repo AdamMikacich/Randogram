@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         naturalHeight = element.childNodes[0].naturalHeight;
 
         /// ensuring min and max width for zooming image
-        restraints = [700, window.innerWidth * 0.9];
+        restraints = [window.innerHeight * 1, window.innerWidth * 0.5];
         scale = clamp(naturalWidth, ...restraints) / naturalWidth;
         element.style.width = naturalWidth * scale + 'px';
         element.style.height = naturalHeight * scale + 'px';
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function addImagesMultiple() {
-    const count = 3;
+    const count = 4;
     for (let i = 0; i < count; i++) {
       addImage();
     }
